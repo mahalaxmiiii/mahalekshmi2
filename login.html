@@ -1,0 +1,36 @@
+<html>
+<head>
+<title>Login</title>
+</head>
+<body bgcolor= #ccddff>
+<br>
+<center><i><h1>Login</h1></center></i></h1>
+<br><br><br><br>
+<center><h2>Username</center></h2>
+<center><input type="email" id="w"></center>
+<br><br>
+<center><h2>Password</center></h2>
+<center><input type="password" id="e"></center><br><br>
+<center><button type="submit">Login</button></center>
+<center><p>Don't have an account? <a href="registration.html">Register here</a></p></center>
+
+<center><p><a href="after.html">Login here</a></p></center>
+
+<center><button onclick="ABC()" type="submit">Submit</button></center>
+
+<script>
+function  ABC()
+{
+let username = document.getElementById("w").value;
+let password = document.getElementById("e").value;
+let uname = localStorage.getItem("Username");
+let pass = localStorage.getItem("password");
+if(username == uname && password==pass)
+{alert("you are valid");
+window.location.href="after.html";
+}
+else{alert("intruder");}
+}
+</script>
+</body>
+</html>

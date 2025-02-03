@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>Register</title>
+</head>
+<body bgcolor= #f2f2f2>
+<center><h1>Register</h1></center>
+<br><br><br>
+<center><h2>Full Name</h2></center>
+<center><input type="text" id="name"><br><br><center>
+<center><h2>Email</h2></center>
+<input type="email" id="w"><br><br>
+<center><h2>Password<h2></center>
+<input type="password" id="e"><br><br>
+<button onclick="ABC()">Submit</button>
+<p>Already have an account? <a href="login.html">Login here</a></p>
+ <p><a href="after.html">Login here</a></p>
+<script>
+function ABC() {
+alert("Confirm submission");
+window.location.href="login.html";
+let Username=document.getElementById("w");
+let password=document.getElementById("e");
+localStorage.setItem("Username", Username.value);
+localStorage.setItem("password", password.value);
+alert(localStorage.getItem("Username"));
+alert(localStorage.getItem("password"));
+}
+</script>
+</body>
+</html>
